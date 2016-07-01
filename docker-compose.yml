@@ -1,0 +1,16 @@
+version: '2'
+services:
+  workspace:
+    image: decipheremory/braveswallow:0.0.0
+    volumes:
+      - ./workspace:/var/workspace
+    environment:
+      ID_RSA: ${ID_RSA}
+      HOST1: gitlab.363-283.io
+      HOST2: gitlab.363-283.io
+      EMAIL: emory.merryman@deciphernow.com
+      NAME: Emory Merryman
+      CANONICAL_URL: ssh://git@gitlab.363-283.io:2252/emory.merryman/braveswallow.git
+      ORIGIN_URL: ssh://git@gitlab.363-283.io:2252/emory.merryman/braveswallow.git
+      PARENT_BRANCH: canonical/develop
+      CHILD_BRANCH: scratch
