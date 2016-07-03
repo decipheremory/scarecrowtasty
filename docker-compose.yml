@@ -17,6 +17,6 @@ services:
   cloud9:
     image: decipheremory/richyard:0.1.0
     volumes:
-      - ${1}:/var/workspace
+      - ${WORKSPACE}:/var/workspace
     ports:
       - "28080:8080"
