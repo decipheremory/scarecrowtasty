@@ -14,3 +14,7 @@ services:
       ORIGIN_URL: ssh://git@gitlab.363-283.io:2252/emory.merryman/braveswallow.git
       PARENT_BRANCH: canonical/develop
       CHILD_BRANCH: scratch
+  cloud9:
+    image: decipheremory/richyard:0.1.0
+    volumes:
+      - ./workspace:/var/workspace
