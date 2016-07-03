@@ -1,7 +1,7 @@
 version: '2'
 services:
   workspace:
-    image: decipheremory/braveswallow:0.0.0
+    image: decipheremory/braveswallow:0.1.0
     volumes:
       - ./workspace:/var/workspace
     environment:
@@ -18,3 +18,5 @@ services:
     image: decipheremory/richyard:0.1.0
     volumes:
       - ./workspace:/var/workspace
+    ports:
+      - "28080:8080"
