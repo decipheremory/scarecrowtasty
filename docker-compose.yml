@@ -3,7 +3,7 @@ services:
   workspace:
     image: decipheremory/braveswallow:0.1.0
     volumes:
-      - ./workspace:/var/workspace
+      - ${1}:/var/workspace
     environment:
       ID_RSA: ${ID_RSA}
       HOST1: gitlab.363-283.io
@@ -17,6 +17,6 @@ services:
   cloud9:
     image: decipheremory/richyard:0.1.0
     volumes:
-      - ./workspace:/var/workspace
+      - ${1}:/var/workspace
     ports:
       - "28080:8080"
